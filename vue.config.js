@@ -2,6 +2,6 @@ module.exports = {
   pwa: {
     name: "Vue Score",
   },
-
-  publicPath: "/vue-cricket-score/",
+  publicPath:
+    process.env.NODE_ENV === "production" ? "/vue-cricket-score/" : "/",
 };

@@ -172,7 +172,7 @@
                     class="button is-success read-random"
                     target="_blank"
                     rel="nofollow noopener"
-                    >📦 Souce Code</a
+                    >📦 Source Code</a
                   >
                   <a
                     href="https://github.com/mskian/cricket-api"

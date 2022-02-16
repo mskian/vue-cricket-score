@@ -10,5 +10,6 @@ cd dist
 git init
 git add -A
 git commit -m '🤖 Deploy'
-git push -f git@github.com:mskian/vue-cricket-score.git main:gh-pages
+git branch gh-pages
+git push -f git@github.com:mskian/vue-cricket-score.git master:gh-pages
 cd -

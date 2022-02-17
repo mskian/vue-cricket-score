@@ -17,6 +17,15 @@
                 Updates.
               </p>
               <br />
+              <div class="buttons is-centered">
+                <button
+                  v-if="deferredPrompt"
+                  class="button is-link pwa-button"
+                  @click.prevent="clickCallback"
+                >
+                  📱 install App
+                </button>
+              </div>
               <div
                 class="content table table is-bordered table is-striped table is-narrow table is-hoverable"
               >
@@ -202,11 +211,12 @@ export default {
     return {
       results: {},
       loading: false,
-      info: null,
+      deferredPrompt: null,
     };
   },
   mounted() {
     this.getResult();
+    this.captureEvent();
   },
   methods: {
     getResult() {
@@ -220,6 +230,25 @@ export default {
           this.results = response.data.livescore;
           this.loading = false;
         });
+    },
+    captureEvent() {
+      window.addEventListener("beforeinstallprompt", (e) => {
+        // ! Prevent Chrome 67 and earlier from automatically showing the prompt
+        e.preventDefault();
+        // Stash the event so it can be triggered later.
+        this.deferredPrompt = e;
+      });
+    },
+    clickCallback() {
+      // Show the prompt
+      this.deferredPrompt.prompt();
+      // Wait for the user to respond to the prompt
+      this.deferredPrompt.userChoice.then((choiceResult) => {
+        if (choiceResult.outcome === "accepted") {
+          // Call another function?
+        }
+        this.deferredPrompt = null;
+      });
     },
   },
 };

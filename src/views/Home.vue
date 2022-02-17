@@ -206,7 +206,7 @@
 import axios from "axios";
 
 export default {
-  name: "Score",
+  name: "ScoreHome",
   data() {
     return {
       results: {},

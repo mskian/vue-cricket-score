@@ -2,7 +2,7 @@
 
 ![build-test](https://github.com/mskian/vue-cricket-score/workflows/build-test/badge.svg)  
 
-Basic and Simple Live Cricket Score site Build using Vue.js
+Basic and Simple Live Cricket Score site Build using Vue.js and Tailwind CSS
 
 > This is an Demo and Sample site - Just clone or download the repo & modify/edit according to your Needs.
 
@@ -15,7 +15,7 @@ http://localhost:8080/?match=<Match id No from cricbuzz>
 
 - Realtime Score data
 - Progressive Web App
-- Mobile Responsive (Build using Bulma CSS Framework)
+- Mobile Responsive (Build using Tailwind CSS Framework)
 
 ## API 🍘
 
@@ -24,9 +24,9 @@ Free Live Cricket Score API (PHP) - [@Cricket API](https://github.com/mskian/cri
 ## Built with ⚙
 
 - HTML
-- CSS, Bulma CSS Framework
+- CSS, Tailwind CSS
 - JavaScript
-- Vue
+- Vue 3
 
 ## Project setup
 
@@ -50,6 +50,15 @@ yarn build
 
 ```sh
 yarn lintfix
+```
+
+### Tailwind CSS
+
+Latest Version Have some issues so using this method to install Tailwind CSS Framework
+
+```sh
+yarn remove tailwindcss postcss autoprefixer
+yarn add -D tailwindcss@npm:@tailwindcss/postcss7-compat @tailwindcss/postcss7-compat postcss@^7 autoprefixer@^9
 ```
 
 ### Customize configuration

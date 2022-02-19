@@ -14,7 +14,7 @@
     "node": {
       "supportPolicy": ["lts_active"]
     },
-    "excludePackagePrefixes": ["tailwindcss", "postcss", "@tailwindcss", "autoprefixer"],
+    "ignoreDeps": ["tailwindcss", "postcss", "@tailwindcss/postcss7-compat", "autoprefixer"],
     "labels": ["renovate"],
     "rangeStrategy": "bump",
     "bumpVersion": null,

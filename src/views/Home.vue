@@ -195,7 +195,7 @@
               Telegram Bot 🤖
             </h1>
             <p class="text-gray-500 font-semibold">
-              Try our IPL Score Telegram Bot - Free to Use
+              Try our Live Cricket Score Telegram Bot - Free to Use
             </p>
           </div>
         </div>

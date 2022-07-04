@@ -236,11 +236,11 @@ export default {
       this.loading = true;
       axios
         .get(
-          "https://cricket-api.vercel.app/cri.php?url=https://m.cricbuzz.com/live-cricket-scores/" +
+          "https://cricket-api.vercel.app/score?url=https://m.cricbuzz.com/live-cricket-scores/" +
             this.$route.query.match
         )
         .then((response) => {
-          this.results = response.data.livescore;
+          this.results = response.data;
           this.loading = false;
         });
     },
